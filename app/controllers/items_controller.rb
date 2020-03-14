@@ -6,9 +6,7 @@ class ItemsController < ApplicationController
     @item = Item.new
     @categories = []
     @categories << Category.new(id: 0,name:"---")
-    Category.where(ancestry: nil).each do |category|
-      @categories << category
-    end
+    @categories << Category.where(ancestry: nil)
   end
   def create
     Item.create(item_params)
