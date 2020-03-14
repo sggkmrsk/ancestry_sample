@@ -1,0 +1,7 @@
+.items
+  =form_with(model:@item,local:true) do |f|
+    .items__parent
+      = select_tag 'parent', options_for_select(@categories.pluck(:name,:id))
+    .items__child
+    .items__grandchild
+    = f.submit "登録する",class:"button"
