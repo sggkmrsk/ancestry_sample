@@ -7,8 +7,7 @@ $(function() {
 
   $("#parent").on("change",function(){
     var int = document.getElementById("parent").value
-    console.log(int)
-    if(int == 1){
+    if(int == 0){
       $('#child').remove();
       $('#item_category_id').remove();
     }else{
