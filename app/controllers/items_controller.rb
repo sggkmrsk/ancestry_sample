@@ -5,8 +5,8 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @categories = []
-    @categories << Category.new(id: 0,name:"---")
-    @categories << Category.where(ancestry: nil)
+    @categories.push(Category.new(id: 0,name:"---"))
+    @categories.concat(Category.where(ancestry: nil))
   end
   def create
     Item.create(item_params)
