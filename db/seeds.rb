@@ -2,8 +2,6 @@ ary_tops = [{name: "Tシャツ/カットソー(半袖/袖なし)"},{name: "Tシ�
 ary_jacket = [{name: "テーラードジャケット"},{name: "ノーカラージャケット"},{name: "Gジャン/デニムジャケット"},{name: "その他"}]
 ary_shoes = [{name: "スニーカー"},{name: "サンダル"},{name: "その他"}]
 
-default = Category.create(name: "---")
-
 lady = Category.create(name: "レディース")
 lady_tops = lady.children.create(name: "トップス")
 lady_tops.children.create(ary_tops)
