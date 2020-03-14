@@ -1,0 +1,18 @@
+%table
+  %tr 
+    %td No.
+    %td 親
+    %td 子
+    %td 孫
+  -@items.each_with_index do |item,i|
+    %tr
+      %td 
+        = i+1
+      %td 
+        =item.category.parent.parent.name
+      %td
+        =item.category.parent.name
+      %td
+        =item.category.name
+%button
+  =link_to '戻る',new_item_path,class:"button"
